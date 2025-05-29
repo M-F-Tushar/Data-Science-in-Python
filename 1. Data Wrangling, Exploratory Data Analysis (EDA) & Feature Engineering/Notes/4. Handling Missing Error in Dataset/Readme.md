@@ -22,18 +22,19 @@ Use the `isnull()` method on the DataFrame to find missing values:
 
 ```python
 hr_df.isnull()
+```
 This returns a Boolean DataFrame with True where values are missing.
 
 Visualizing Missing Data
 To view rows with missing values:
-
-
+```python
 hr_df[hr_df.isnull().any(axis=1)]
+```
 Step 2: Count Missing Values Per Column
 Sum the missing values for each column:
-
-
+```python
 hr_df.isnull().sum()
+```
 Example output:
 
 MonthlyIncome    3
@@ -43,27 +44,37 @@ JobRole          1
 ...
 Step 3: Strategy 1 – Drop Rows with Missing Values
 Drop all rows that contain any missing values:
-
+```python
 hr_df.dropna(how='any', inplace=True)
+```
 how='any' means drop the row if any missing value is present.
 
 inplace=True updates the DataFrame directly.
 
 Verify Changes
+```python
 hr_df.isnull().sum()
+```
 All missing values should be removed (output zeros).
 
 Step 4: Strategy 2 – Fill Missing Values
 Sometimes, instead of dropping rows, you can fill missing values with a statistic such as the mean.
 
 Re-import Data
+```python
 import pandas as pd
 hr_df = pd.read_csv("Human_Resources.csv")
+```
 Calculate Mean Monthly Income
+```python
 mean_income = hr_df['MonthlyIncome'].mean()
-print(mean_income)  # Example output: 6505.0
+print(mean_income)
+```
+# Example output: 6505.0
 Fill Missing Monthly Income Values
+```python
 hr_df['MonthlyIncome'].fillna(mean_income, inplace=True)
+```
 This replaces missing values in MonthlyIncome with the average value.
 
 Final Notes
