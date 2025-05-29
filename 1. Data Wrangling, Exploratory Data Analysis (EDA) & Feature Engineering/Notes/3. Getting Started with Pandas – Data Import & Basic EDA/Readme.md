@@ -1,37 +1,41 @@
-🎯 Goal
-Build a strong foundation in data wrangling using the Pandas library. Learn to load datasets, explore data structures, clean and preprocess missing values, and apply basic EDA techniques essential for real-world machine learning.
+# 📘 Lesson 1: 📊 Getting Started with Pandas – Data Import & Basic EDA
 
-🧱 Notebook Structure
-The notebook contains 8 main tasks, each representing a core data wrangling concept:
+## 🎯 Goal
 
-Task	Focus
-Task 1	Load dataset and inspect basic statistics
-Task 2	Handle missing values (e.g., dropping or imputing)
-Task 3	Encode categorical features using one-hot encoding
-Task 4	Normalize and standardize numerical features
-Task 5	Apply filtering and data selection with Pandas
-Task 6	Perform simple exploratory data analysis (EDA)
-Task 7	Use apply() to transform data using custom functions
-Task 8	Visualize with histograms and correlation matrices
+Build a strong foundation in **data wrangling** using the **Pandas** library. Learn to load datasets, explore data structures, clean and preprocess missing values, and apply basic **EDA techniques** essential for real-world machine learning.
+
+---
+
+## 🧱 Notebook Structure
+
+The notebook contains **8 main tasks**, each representing a core data wrangling concept:
+
+| Task | Focus |
+|------|-------|
+| **Task 1** | Load dataset and inspect basic statistics |
+| **Task 2** | Handle missing values (e.g., dropping or imputing) |
+| **Task 3** | Encode categorical features using one-hot encoding |
+| **Task 4** | Normalize and standardize numerical features |
+| **Task 5** | Apply filtering and data selection with Pandas |
+| **Task 6** | Perform simple exploratory data analysis (EDA) |
+| **Task 7** | Use `apply()` to transform data using custom functions |
+| **Task 8** | Visualize with histograms and correlation matrices |
 
 Each task includes:
+- 🧠 Key Concepts
+- 💡 Practice Exercises
+- ✅ Solutions at the end (try solving first!)
 
-🧠 Key Concepts
+---
 
-💡 Practice Exercises
+## 🧪 Step-by-Step Guide
 
-✅ Solutions at the end (try solving first!)
+### 1️⃣ Import the Pandas Library
 
-🧪 Step-by-Step Guide
-1️⃣ Import the Pandas Library
-python
-Copy
-Edit
+```python
 import pandas as pd
 2️⃣ Display All Rows and Columns (Optional)
-python
-Copy
-Edit
+
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 Helps when viewing large datasets in Jupyter Notebook.
@@ -43,9 +47,7 @@ Click the File icon on the left sidebar.
 Click the upload arrow to upload human_resources.csv.
 
 Read CSV into a DataFrame
-python
-Copy
-Edit
+
 hr_df = pd.read_csv('human_resources.csv')
 You can now start analyzing the data using the hr_df object.
 
@@ -62,7 +64,7 @@ MonthlyIncome
 
 Attrition (target variable)
 
-Common challenges you’ll see:
+Common challenges you'll explore:
 
 Missing values
 
@@ -87,9 +89,6 @@ Clean and explore a new dataset
 Compare with a provided solution
 
 ✅ Quick Start Code
-python
-Copy
-Edit
 import pandas as pd
 
 # Load dataset
@@ -97,5 +96,6 @@ hr_df = pd.read_csv('human_resources.csv')
 
 # Display first few rows
 hr_df.head()
-📌 Pro Tip:
-Always explore your data before building models. Clean data = Better predictions!
+📌 Pro Tip
+Always explore your data before building models.
+Clean data = Better predictions!
