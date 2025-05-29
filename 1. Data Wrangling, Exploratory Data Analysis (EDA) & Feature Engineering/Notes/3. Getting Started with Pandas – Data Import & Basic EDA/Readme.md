@@ -31,13 +31,14 @@ Each task includes:
 ## 🧪 Step-by-Step Guide
 
 ### 1️⃣ Import the Pandas Library
-
 ```python
 import pandas as pd
+```
 2️⃣ Display All Rows and Columns (Optional)
-
+```python
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
+```
 Helps when viewing large datasets in Jupyter Notebook.
 
 📂 Load the Dataset
@@ -47,8 +48,9 @@ Click the File icon on the left sidebar.
 Click the upload arrow to upload human_resources.csv.
 
 Read CSV into a DataFrame
-
+```python
 hr_df = pd.read_csv('human_resources.csv')
+```
 You can now start analyzing the data using the hr_df object.
 
 🔍 Dataset Preview
@@ -89,13 +91,18 @@ Clean and explore a new dataset
 Compare with a provided solution
 
 ✅ Quick Start Code
+```python
 import pandas as pd
+```
 
 # Load dataset
+```python
 hr_df = pd.read_csv('human_resources.csv')
-
+```
 # Display first few rows
+```python
 hr_df.head()
+```
 📌 Pro Tip
 Always explore your data before building models.
 Clean data = Better predictions!
